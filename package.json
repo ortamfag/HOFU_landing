@@ -10,7 +10,7 @@
     "dependencies": {
         "gulp-babel": "^8.0.0",
         "pug": "^2.0.4"
-      },
+    },
     "devDependencies": {
         "browser-sync": "^2.27.9",
         "gulp": "^4.0.2",
