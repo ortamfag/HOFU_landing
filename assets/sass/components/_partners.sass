@@ -1,3 +1,73 @@
 .partners
     background-color: #1a1a1a
-    &__wrapper
+
+    &__inner
+
+        & h2
+            @include bold
+            font-size: 24px
+            color: #fad63a
+            text-align: center
+            margin: 0 auto
+            padding-top: 100px
+
+        & h3
+            @include medium
+            font-size: 24px
+            color: $white
+            text-align: center
+            margin: 0 auto
+            padding-top: 50px
+
+        & p
+            font-size: 16px
+            @include medium
+            color: $white
+            padding: 50px 200px 0px 200px
+            text-align: left
+            line-height: 26px
+
+
+    &__list
+
+        padding: 100px
+
+        &-item
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 100px
+
+            &-text
+                width: 50%
+
+                & h2
+                    @include bold
+                    font-size: 24px
+                    color: #fad63a
+                    margin-bottom: 40px 
+
+                & p
+                    @include medium
+                    font-size: 16px
+                    color: $white
+
+                    &:nth-child(3)
+                        margin-top: 40px
+
+            &-company
+                padding: 30px
+                background-color: #2a2a2a
+                border-radius: 35px
+                margin-left: 40px
+
+                & img
+                    width: 100%
+
+
+
+        &-img
+            margin-right: 40px
+
+            &-right
+                margin-left: 40px
