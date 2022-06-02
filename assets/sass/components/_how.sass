@@ -1,0 +1,38 @@
+.how
+    padding: 0 100px 100px 100px
+    background-color: #1a1a1a
+
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &-text 
+            margin-right: 40px
+            
+            & h2
+                color: #fad63a
+                @include bold
+                font-size: 24px
+                margin-bottom: 30px
+
+            & p
+                @include medium
+                color: $white
+                font-size: 16px
+                margin-bottom: 20px
+
+            & span
+                color: #3aa5ff
+
+    &__contact p
+        margin-bottom: 5px !important
+
+        & span
+            color: $white
+
+                    
+
+.official
+    @include bold
+

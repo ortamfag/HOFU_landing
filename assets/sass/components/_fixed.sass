@@ -1,0 +1,125 @@
+.fixed 
+    padding: 5px 3% 5px 3%
+    background-color: #333333
+    display: flex
+    transform: translateY(-150%) !important
+    transition: 0.4s all
+    align-items: center
+    justify-content: space-around
+    position: fixed
+    width: calc(100% - 15%)
+    margin: auto
+    left: 0
+    right: 0
+    border-radius: 0px 0px 10px 10px
+    z-index: 900
+
+    &__logo-text
+        margin: 0px 20px 0px 20px
+        width: 30%
+
+        & h3
+            @include bold
+            font-size: 16px
+            color: $white
+
+        & p
+            @include medium
+            font-size: 16px
+            color: $white
+
+    &__contact
+        text-align: right
+
+        & li
+            color: $white
+            @include medium
+            font-size: 14px
+            list-style-type: none
+            margin-bottom: 5px
+
+            &::before
+                content: ''
+                display: inline-block
+                width: 7px
+                height: 7px
+                margin-right: 5px
+                background-color: #1ed300
+                border-radius: 100%
+
+        & h2
+            @include bold
+            font-size: 24px
+            margin-bottom: 5px
+            color: $white
+
+            
+
+    
+    &__inner
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      &-email
+        color: $white
+        @include bold
+        font-size: 16px
+
+    & img
+        width: 60px
+        height: 60px
+
+
+    & button
+        text-transform: uppercase
+        color: $white
+        background-color: #ffb500
+        border-radius: 10px
+        border: 0
+        outline: 0
+        padding: 20px
+        box-shadow: 2px 15px 30px 0px #ffb500
+        display: flex
+        margin: 0 auto
+        @include bold
+        font-size: 16px
+        cursor: pointer
+
+@keyframes main-button 
+  0% 
+    background-position: 0% 40%
+
+  50%
+    background-position: 100% 61%
+
+  100%
+    background-position: 0% 40%
+
+.active-f
+  transform: translateY(0%) !important
+  transition: 0.4s all !important
+
+@media (max-width: 550px)
+
+  .fixed__inner p
+    display: none
+
+  .fixed button
+    min-width: 60%
+
+  .fixed
+    justify-content: space-around
+    bottom: 0
+    border-radius: 40px 40px 0px 0px
+    width: 100%
+    transform: translateY(100%) !important
+    
+
+  .active-f
+    transform: translateY(0%) !important
+    transition: 0.4s all !important  
+
+    & img
+      width: 70px
+      height: 70px

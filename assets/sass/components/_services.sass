@@ -3,22 +3,32 @@
     background-color: #1a1a1a
 
     &__wrapper
-
+        padding-bottom: 100px !important
         & button
-            text-transform: uppercase
             color: $white
-            background-color: #ffb500
+            background: rgb(255,146,0)
+            background: linear-gradient(0deg, rgba(255,146,0,1) 0%, rgba(255,190,0,1) 30%)
+            box-shadow: 2px 5px 30px 0px #ffb500
             border-radius: 10px
+            padding: 30px 30px
+
             border: 0
             outline: 0
-            padding: 20px
-            box-shadow: 2px 15px 30px 0px #ffb500
             display: flex
             margin: 0 auto
             @include bold
-            font-size: 16px
+            font-size: 24px
             margin-top: 30px
             cursor: pointer
+
+
+        &-bottom
+            @include bold
+            font-size: 24px
+            color: $white
+            text-align: center
+            padding-top: 100px
+            padding-bottom: 25px
         
 
     &__inner

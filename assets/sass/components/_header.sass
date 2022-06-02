@@ -16,7 +16,7 @@
         align-items: center
 
         &-item
-            margin: 0 40px 0px 0px
+            margin: 0 auto
 
             & h2
                 @include bold
@@ -62,3 +62,14 @@
             
             width: 65%
             margin: 30px auto
+
+
+@media (max-width: 1450px)
+    .header__text p
+        width: 80%
+
+    .header__inner-item h2
+        font-size: 22px
+
+    .header__inner-item button
+        margin-top: 15px
