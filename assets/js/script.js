@@ -2,7 +2,7 @@ const fixed = document.querySelector('#fixed')
 
 function opacity() {
 
-  if (window.innerWidth >= 550) {
+  if (window.innerWidth >= 590) {
   
     if (window.pageYOffset > 200) {
       fixed.classList.add('active-f')
@@ -15,7 +15,7 @@ function opacity() {
   }
 
   else
-    if (window.pageYOffset > 18500) {
+    if (window.pageYOffset > 8000) {
       fixed.classList.remove('active-f')
     }
 
