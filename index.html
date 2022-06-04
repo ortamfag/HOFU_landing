@@ -11,11 +11,53 @@
 
 <body class="body">
 
+    <div id="modalPopup" class="popup">
+        <div id="modalBg" class="bg"></div>
+        <div class="popup__body">
+          <div class="popup__content">
+            <a id="modalCross" class="popup__close"><img src="assets/img/close.png" alt="закрыть"></a>
+    
+            <div class="popup__wrapper">
+              <div class="popup__text">
+                <h2>Бесплатная <br> консультация</h2>
+                <p id="popup-subtitle">Заполните, пожалуйста, форму. Мы будем рады <br>
+                познакомиться с вами и начать переговоры</p>
+    
+                <form>
+                  <p>Пожалуйста, представьтесь</p>
+                  <input type="text" placeholder="Your name">
+    
+                  <p id="popup-contact">Как с вами связаться?</p>
+                  <input placeholder="E-mail" type="email">
+                  <div class="popup__text-form">
+                    <input placeholder="00" type="number">
+                    <input placeholder="Phone number" type="tel">
+                  </div>
+                  <p>Ваш проект</p>
+                  <input placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email">
+    
+                  <button type="submit">Отправить</button>
+                  
+                  <div class="popup__checkbox">
+                    <input type="checkbox" id="checkbox-id-p">
+                    <label for="checkbox-id-p">Я согласен на обработку персональных данных</label>
+                  </div>
+    
+    
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
     <div class="body__wrapper">
 
         <div class="fixed" id="fixed">
             <div class="fixed__inner">
-                <img src="assets/img/logo.svg" />
+                <a href="./"><img src="assets/img/logo3.svg"></a>
                 <div class="fixed__logo-text">
                     <h3>Группа компаний «ХОФУ»</h3>
                     <p>Делаем эффективный и надежный бизнес с Китаем с 2008 года.</p>
@@ -41,7 +83,7 @@
         <nav class="nav">
             <div class="nav__wrapper">
                 <div class="nav__logo">
-                    <img src="assets/img/logo.svg">
+                    <a href="./"><img src="assets/img/logo3.svg"></a>
                     <div class="nav__logo-text">
                         <h3>Группа компаний «ХОФУ»</h3>
                         <p>Делаем эффективный и надежный бизнес с Китаем с 2008 года.</p>
@@ -72,13 +114,13 @@
                 <div class="header__inner">
                     <div class="header__inner-item">
                         <h2>Выводим бренды и товары из СНГ на китайский рынок сбыта</h2>
-                        <button>Узнать как начать продажи в Китае</button>
+                        <button id="modal__preview-1">Узнать как начать продажи в Китае</button>
                     </div>
 
                     <div class="header__inner-item">
                         <h2>Поиск, покупка, контроль и экспорт
                             любых товаров и оборудования из Китая</h2>
-                        <button>Рассчитать ваш проект</button>
+                        <button id="modal__preview-2">Рассчитать ваш проект</button>
                     </div>
                 </div>
 
