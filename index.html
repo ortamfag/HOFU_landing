@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>HOFU</title>
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
@@ -25,7 +26,7 @@
     
                 <form>
                   <p>Пожалуйста, представьтесь:</p>
-                  <input type="text" placeholder="Your name">
+                  <input type="text" placeholder="Ваше имя">
     
                   <p id="popup-contact">Как с вами связаться?</p>
                   <input placeholder="Электронная почта" type="email">
@@ -34,9 +35,9 @@
                     <input placeholder="Телефон" type="tel">
                   </div>
                   <p>Ваш проект:</p>
-                  <input placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email">
+                  <textarea id="placeholder" placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email"></textarea>
     
-                  <button type="submit">Отправить</button>
+                  <button id="formSubmit" type="submit">Отправить</button>
                   
                   <div class="popup__checkbox">
                     <input type="checkbox" id="checkbox-id-p">
@@ -46,6 +47,10 @@
     
                 </form>
 
+              </div>
+
+              <div class="popup__text-submit">
+                  
               </div>
             </div>
           </div>
@@ -65,7 +70,7 @@
 
                 <p class="fixed__inner-email">info@huofu.ru</p>
 
-                <button id="contact__preview">Получить консультацию</button>
+                <button id="modal__preview-1">Получить консультацию</button>
 
                 <div class="fixed__contact">
                     <ul>
@@ -114,13 +119,13 @@
                 <div class="header__inner">
                     <div class="header__inner-item">
                         <h2>Выводим бренды и товары из СНГ на китайский рынок сбыта</h2>
-                        <button id="modal__preview-1">Узнать как начать продажи в Китае</button>
+                        <button id="modal__preview-2">Узнать как начать продажи в Китае</button>
                     </div>
 
                     <div class="header__inner-item">
                         <h2>Поиск, покупка, контроль и экспорт
                             любых товаров и оборудования из Китая</h2>
-                        <button id="modal__preview-2">Рассчитать ваш проект</button>
+                        <button id="modal__preview-3">Рассчитать ваш проект</button>
                     </div>
                 </div>
 
@@ -364,7 +369,7 @@
                     </div>
 
                     <h2 class="services__wrapper-bottom">Не нашли нужную услугу?</h2>
-                    <button>Оставьте заявку, чтобы обсудить ваш проект</button>
+                    <button id="modal__preview-4">Оставьте заявку, чтобы обсудить ваш проект</button>
                 </div>
             </div>
         </section>

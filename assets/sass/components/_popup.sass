@@ -46,7 +46,7 @@
         background-color: #1c1c1c
         color: #000
         max-width: 70%
-        padding: 25px 50px 0px 50px
+        padding: 25px 80px 0px 80px
         position: relative
         border-radius: 40px
 
@@ -72,10 +72,7 @@
         right: 25px
         top: 20px
         cursor: pointer
-        
-        & img
-            width: 45px !important
-            height: 45px !important
+    
 
     &__text 
         
@@ -85,12 +82,16 @@
             color: $white
             text-transform: uppercase
             padding-left: 20px
+            padding-top: 20px
 
         &-form
             display: flex
             align-items: center
             margin-top: 20px
             margin-bottom: 20px
+
+        &-submit
+            display: none
 
 .open
     opacity: 1
@@ -110,8 +111,8 @@
     content: '+'
     position: absolute
     margin-left: 15px
-    margin-bottom: 2px
     color: $white
+    @include medium
 
 input[type="email"], input[type="number"], input[type="tel"], input[type='text']
     padding: 16px
@@ -123,6 +124,22 @@ input[type="email"], input[type="number"], input[type="tel"], input[type='text']
     text-indent: 15px
     font-size: 16px
     color: $white
+
+textarea
+    padding: 10px 20px
+    background-color: #2a2a2a
+    border: 0px
+    border-radius: 10px
+    outline: none
+    @include medium
+    font-size: 16px
+    color: $white
+    width: 100%
+    min-height: 120px
+    max-width: 900px
+
+    &::placeholder
+        line-height: 26px
 
 input[type='text']
     width: 100%
@@ -160,7 +177,7 @@ input[type="tel"]
     & label:before
         content: ''
         display: inline-block
-        font: 30px/30px
+        font: 30px/30px Montserrat
         margin-right: 15px
         text-align: center
         text-indent: 0px
@@ -185,16 +202,65 @@ input[type="tel"]
     @include medium
     font-size: 16px
     color: $white
-    margin-top: 20px
-    margin-bottom: 20px
+    margin-top: 25px
+    margin-bottom: 25px
     padding-left: 20px
 
 form p
     @include bold
     font-size: 16px
     color: $white
-    margin-bottom: 20px
+    margin-bottom: 15px
     padding-left: 20px
 
 form
     padding-bottom: 20px
+
+@media (max-width: 968px)
+    .popup__content
+        padding: 25px 30px 0px 30px
+        width: 90%
+        max-width: 90%
+
+    .popup__wrapper
+        justify-content: center
+
+@media (max-width: 615px)
+    .popup__text h2
+        font-size: 28px
+
+    #popup-subtitle
+        font-size: 14px
+
+    textarea 
+        min-height: 180px
+
+    .popup button
+        margin: 30px auto 0px auto
+
+    .popup__checkbox label
+        text-align: center
+        display: inline-block
+        margin-top: 0px
+
+    .popup__checkbox
+        padding-bottom: 0px
+@media (max-width: 470px)
+    .popup__content
+        width: 100%
+        max-width: 100%
+        padding: 25px 10px 0px 10px
+    .popup__text-form
+        flex-direction: column
+
+        &::before
+            display: none
+
+    input[type=number]
+        width: 100%
+        margin-bottom: 20px
+        margin-right: 0px
+        text-indent: 15px
+
+    input[type=tel]
+        width: 100%

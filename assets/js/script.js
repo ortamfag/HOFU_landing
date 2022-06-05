@@ -29,19 +29,22 @@ function opacity() {
 window.onscroll=opacity
 opacity()
 
-// modals 
-const makeModal = modalSel => {
-	const modalEl = document.querySelector(modalSel + 'Popup');
-		btnEl = document.querySelector(modalSel + '__preview-1'),
-    
-		closeEl = document.querySelector(modalSel + 'Cross')
-		closeBody = document.querySelector('.popup')
-		bg = document.querySelector(modalSel + 'Bg')
-		
+//modal
+const modalEl = document.querySelector('#modalPopup'),
+      btnEl1 = document.querySelector('#modal__preview-1'),
+      btnEl2 = document.querySelector('#modal__preview-2'),
+      btnEl3 = document.querySelector('#modal__preview-3'),
+      btnEl4 = document.querySelector('#modal__preview-4'),
+      closeEl = document.querySelector('#modalCross'),
+      closeBody = document.querySelector('.popup'),
+      bg = document.querySelector('#modalBg')
 
-	btnEl.addEventListener('click', () => modalEl.classList.add('open'));
-	closeEl.addEventListener('click', () => modalEl.classList.remove('open'));
-	bg.addEventListener('click', () => modalEl.classList.remove('open'));
-}
+btnEl1.addEventListener('click', () => modalEl.classList.add('open'));
+btnEl2.addEventListener('click', () => modalEl.classList.add('open'));
+btnEl3.addEventListener('click', () => modalEl.classList.add('open'));
+btnEl4.addEventListener('click', () => modalEl.classList.add('open'));
 
-makeModal('#modal')
+closeEl.addEventListener('click', () => modalEl.classList.remove('open'));
+bg.addEventListener('click', () => modalEl.classList.remove('open'));
+
+
