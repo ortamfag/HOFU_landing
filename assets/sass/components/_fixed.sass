@@ -7,7 +7,7 @@
     align-items: center
     justify-content: space-around
     position: fixed
-    width: calc(100% - 15%)
+    width: 75%
     margin: auto
     left: 0
     right: 0
@@ -127,6 +127,14 @@
 .active-f
   transform: translateY(0%) !important
   transition: 0.4s all !important
+
+@media (max-width: 1670px)
+  .fixed
+    width: 80%
+
+@media (max-width: 1525px)
+  .fixed
+    width: 85%
 
 @media (max-width: 1420px)
 
