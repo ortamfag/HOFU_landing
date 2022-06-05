@@ -39,13 +39,44 @@ const modalEl = document.querySelector('#modalPopup'),
       closeBody = document.querySelector('.popup'),
       bg = document.querySelector('#modalBg')
 
-btnEl1.addEventListener('click', () => modalEl.classList.add('open'));
-btnEl2.addEventListener('click', () => modalEl.classList.add('open'));
-btnEl3.addEventListener('click', () => modalEl.classList.add('open'));
-btnEl4.addEventListener('click', () => modalEl.classList.add('open'));
+btnEl1.addEventListener('click', () => {
+  
+  modalEl.classList.add('open');
+  body.classList.add('noscroll')
 
-closeEl.addEventListener('click', () => modalEl.classList.remove('open'));
-bg.addEventListener('click', () => modalEl.classList.remove('open'));
+})
+
+btnEl2.addEventListener('click', () => {
+  
+  modalEl.classList.add('open');
+  body.classList.add('noscroll')
+
+})
+
+btnEl3.addEventListener('click', () => {
+  
+  modalEl.classList.add('open');
+  body.classList.add('noscroll')
+
+})
+
+btnEl4.addEventListener('click', () => {
+  
+  modalEl.classList.add('open');
+  body.classList.add('noscroll')
+
+})
+
+closeEl.addEventListener('click', () => {
+  
+  modalEl.classList.remove('open')
+  body.classList.remove('noscroll')
+  
+});
+bg.addEventListener('click', () => {
+  modalEl.classList.remove('open')
+  body.classList.remove('noscroll')
+})
 
 //
 
@@ -56,4 +87,8 @@ const popupNormal = document.querySelector('.popup__text')
 formSubmit.addEventListener('click', () => popupSubmit.classList.add('active'))
 formSubmit.addEventListener('click', () => popupNormal.classList.add('disactive'))
 
+
+//
+
+const body = document.querySelector('.body')
 

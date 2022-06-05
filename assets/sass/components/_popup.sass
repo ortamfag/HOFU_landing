@@ -9,7 +9,7 @@
     visibility: hidden
     overflow-x: hidden
     overflow-y: auto
-    transition: all 0.5s ease 0s
+    transition: all 0.2s ease 0s
     z-index: 901
 
     & button
@@ -195,7 +195,13 @@ input[type="email"]
 input[type="number"]
     width: 40%
     margin-right: 5%
-    text-indent: 40px
+    text-indent: 20px
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
 
 input[type="tel"]
     width: 60%
