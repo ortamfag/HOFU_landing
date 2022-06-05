@@ -47,4 +47,13 @@ btnEl4.addEventListener('click', () => modalEl.classList.add('open'));
 closeEl.addEventListener('click', () => modalEl.classList.remove('open'));
 bg.addEventListener('click', () => modalEl.classList.remove('open'));
 
+//
+
+const formSubmit = document.querySelector('#formSubmit')
+const popupSubmit = document.querySelector('.popup__text-submit')
+const popupNormal = document.querySelector('.popup__text')
+
+formSubmit.addEventListener('click', () => popupSubmit.classList.add('active'))
+formSubmit.addEventListener('click', () => popupNormal.classList.add('disactive'))
+
 

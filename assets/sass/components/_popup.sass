@@ -92,6 +92,50 @@
 
         &-submit
             display: none
+            padding-bottom: 20px
+            max-width: 25vw
+
+            & h2
+                @include bold
+                font-size: 34px
+                color: $white
+                text-transform: uppercase
+                padding-left: 20px
+                padding-top: 20px
+
+            & p
+                @include medium
+                font-size: 16px
+                color: $white
+                margin-top: 25px
+                margin-bottom: 25px
+                padding-left: 20px
+
+            & span
+                color: #4dadff
+
+            & button
+                text-transform: uppercase
+                color: $white
+                background: #3f8bcd
+                background: linear-gradient(0deg, #3f8bcd 0%, #4dacfe 90%)
+                border-radius: 10px
+                border: 0
+                outline: 0
+                padding: 20px 45px
+                box-shadow: 0px 5px 30px 0px #3f8bcd
+                display: flex
+                
+                @include bold
+                font-size: 16px
+                margin-top: 30px
+                cursor: pointer
+                margin-left: 15px
+
+                &:hover
+                    transition: 0.4s
+                    box-shadow: 0px 0px 0px 0px
+
 
 .open
     opacity: 1
@@ -216,6 +260,25 @@ form p
 form
     padding-bottom: 20px
 
+@media (max-width: 1450px)
+    .popup__text-submit
+        width: 33vw
+        max-width: 33vw
+
+@media (max-width: 1300px)
+    .popup__text-submit
+        width: 30vw
+        max-width: 30vw
+
+        & h2
+            text-align: center
+            padding-left: 0px
+        & p
+            text-align: center
+            padding-left: 0px
+
+        & button
+            margin: 0 auto
 @media (max-width: 968px)
     .popup__content
         padding: 25px 30px 0px 30px
@@ -224,6 +287,10 @@ form
 
     .popup__wrapper
         justify-content: center
+
+    .popup__text-submit
+        width: 100%
+        max-width: 100%
 
 @media (max-width: 615px)
     .popup__text h2
@@ -264,3 +331,9 @@ form
 
     input[type=tel]
         width: 100%
+
+.active
+    display: block !important
+
+.disactive
+    display: none !important
