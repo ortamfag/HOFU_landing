@@ -32,7 +32,8 @@
                 text-transform: uppercase
                 color: $white
                 background: rgb(255,146,0)
-                background: linear-gradient(0deg, rgba(255,146,0,1) 0%, rgba(255,190,0,1) 90%)
+                background: linear-gradient(90deg, #ff9200, #fad63a, #ff9200, #fad63a)
+                background-size: 400%
                 border-radius: 10px
                 border: 0
                 outline: 0
@@ -42,12 +43,29 @@
                 margin: 0 auto
                 @include bold
                 font-size: 16px
-                margin-top: 30px
                 cursor: pointer
+                margin-top: 30px
 
                 &:hover
-                    transition: 0.4s
-                    box-shadow: 0px 0px 0px 0px
+                    animation: animate 8s linear infinite
+
+                    &:before
+                        max-width: 100%
+                        filter: blur(20px)
+                        opacity: 1
+                        animation: animate 8s linear infinite
+                        content: ""
+                        position: absolute
+                        top: -5px
+                        right: -5px
+                        bottom: -5px
+                        left: -5px
+                        z-index: -1
+                        background: linear-gradient(90deg, #ff9200, #fad63a, #ff9200, #fad63a)
+                        background-size: 400%
+                        border-radius: 10px
+                        opacity: 0
+                        transition: .5s
     &__text
         padding: 130px 0px
         margin: 0 auto
