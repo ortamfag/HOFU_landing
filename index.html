@@ -10,10 +10,24 @@
     <link type="image/x-icon" href="assets/img/fav.png" rel="shortcut icon">
     <link type="image/x-icon" href="assets/img/favlog.svg" rel="shortcut icon">
     <link rel="stylesheet" href="assets/css/style.min.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89146903, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/89146903" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="body">
-
     <div id="modalPopup" class="popup">
         <div id="modalBg" class="bg"></div>
         <div class="popup__body">
@@ -26,18 +40,22 @@
                 <p id="popup-subtitle">Заполните, пожалуйста, форму. Мы будем рады <br>
                 познакомиться с вами и начать переговоры.</p>
     
-                <form>
+                <form id="mail-form">
                   <p>Пожалуйста, представьтесь:</p>
-                  <input type="text" placeholder="Ваше имя">
+                  <input id="form_name" name="name" type="text" placeholder="Ваше имя">
     
                   <p id="popup-contact">Как с вами связаться?</p>
-                  <input placeholder="Электронная почта" type="email">
+                  <input id="form_email" name="email" placeholder="Электронная почта" type="email">
                   <div class="popup__text-form">
-                    <input placeholder="Код" value="7" type="number">
-                    <input placeholder="Телефон" type="tel">
+                    <input id="form_phcode" name="phcode" placeholder="Код" value="7" type="number">
+                    <input id="form_phone" name="phone" placeholder="Телефон" type="tel">
                   </div>
                   <p>Ваш проект:</p>
-                  <textarea id="placeholder" placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email"></textarea>
+                  <textarea id="placeholder" name="message" placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email"></textarea>
+
+		  <div class="popup__error disactive">
+			<p id="popup-error">Текст ошибки</p>
+                  </div>
     
                   <button id="formSubmit" type="button">Отправить</button>
                   
@@ -62,13 +80,19 @@
 
                 <a href="https://vk.com/hofu_business"><button type="button">ВКОНТАКТЕ</button></a>
               </div>
+
+	      <div class="popup__text-error">
+                <h2>При отправке почты произошла ошибка</h2>
+                <p id="smtp-error">Текст ошибки</p>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     
 
-    <div class="body__wrapper">
+    <div class="body__wrapper" id="particles-js">
 
         <div class="fixed" id="fixed">
             <div class="fixed__inner">
@@ -87,8 +111,8 @@
                         <li>Звоните, мы сейчас работаем</li>
                     </ul>
 
-                    <h2>+86 132 3579 9307</h2>
-                    <h2>+7 902 510 24 96</h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
 
                 </div>
             </div>
@@ -117,8 +141,8 @@
                         <li>Звоните, мы сейчас работаем</li>
                     </ul>
 
-                    <h2>+86 132 3579 9307</h2>
-                    <h2>+7 902 510 24 96</h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
                     <h2>info@hofu.ru</h2>
                 </div>
             </div>
@@ -412,8 +436,8 @@
                             <div class="how__contact">
                                 <p><span class="official">Официальные контакты для связи с ХОФУ:</span></p>
                                 <p>info@hofu.ru</p>
-                                <p>+86 132 3579 9307</p>
-                                <p>+7 902 510 24 96</p>
+                                <p><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></p>
+                                <p><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></p>
                             </div>
                         </div>
 
@@ -436,6 +460,8 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/particles.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
