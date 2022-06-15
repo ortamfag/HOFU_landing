@@ -10,182 +10,199 @@
     <link type="image/x-icon" href="assets/img/fav.png" rel="shortcut icon">
     <link type="image/x-icon" href="assets/img/favlog.svg" rel="shortcut icon">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
-                .insertBefore(k, a)
-        })
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(89146903, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/89146903" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
+   ym(89146903, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/89146903" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="body">
+
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3253084", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=3253084;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+    type: 'itemView',
+    productid: 'VALUE',
+    pagetype: 'VALUE',
+    list: 'VALUE',
+    totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+
     <div id="modalPopup" class="popup">
         <div id="modalBg" class="bg"></div>
         <div class="popup__body">
-            <div class="popup__content">
-                <a id="modalCross" class="popup__close"><img src="assets/img/close.svg" alt="закрыть"></a>
+          <div class="popup__content">
+            <a id="modalCross" class="popup__close"><img src="assets/img/close.svg" alt="закрыть"></a>
+    
+            <div class="popup__wrapper">
+              <div class="popup__text">
+                <h2>Бесплатная <br> консультация</h2>
+                <p id="popup-subtitle">Заполните, пожалуйста, форму. Мы будем рады <br>
+                познакомиться с вами и начать переговоры.</p>
+    
+                <form id="mail-form">
+                  <p>Пожалуйста, представьтесь:</p>
+                  <input id="form_name" name="name" type="text" placeholder="Ваше имя">
+    
+                  <p id="popup-contact">Как с вами связаться?</p>
+                  <input id="form_email" name="email" placeholder="Электронная почта" type="email">
+                  <div class="popup__text-form">
+                    <input id="form_phcode" name="phcode" placeholder="Код" value="7" type="number">
+                    <input id="form_phone" name="phone" placeholder="Телефон" type="tel">
+                  </div>
+                  <p>Ваш проект:</p>
+                  <textarea id="placeholder" name="message" placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email"></textarea>
 
-                <div class="popup__wrapper">
-                    <div class="popup__text">
-                        <h2>Бесплатная <br> консультация</h2>
-                        <p id="popup-subtitle">Заполните, пожалуйста, форму. Мы будем рады <br>
-                            познакомиться с вами и начать переговоры.</p>
+		  <div class="popup__error disactive">
+			<p id="popup-error">Текст ошибки</p>
+                  </div>
+    
+                  <button id="formSubmit" type="button">Отправить</button>
+                  
+                  <div class="popup__checkbox">
+                    <input required type="checkbox" id="checkbox-id-p">
+                    <label for="checkbox-id-p">Я согласен на обработку персональных данных</label>
+                  </div>
+    
+    
+                </form>
 
-                        <form id="mail-form">
-                            <p>Пожалуйста, представьтесь:</p>
-                            <input id="form_name" name="name" type="text" placeholder="Ваше имя">
+              </div>
 
-                            <p id="popup-contact">Как с вами связаться?</p>
-                            <input id="form_email" name="email" placeholder="Электронная почта" type="email">
-                            <div class="popup__text-form">
-                                <input id="form_phcode" name="phcode" placeholder="Код" value="7" type="number">
-                                <input id="form_phone" name="phone" placeholder="Телефон" type="tel">
-                            </div>
-                            <p>Ваш проект:</p>
-                            <textarea id="placeholder" name="message"
-                                placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений."
-                                type="email"></textarea>
+              <div class="popup__text-submit">
+                <h2>Форма успешно <br>
+                    обработана</h2>
+                <p>Это означает, что мы свяжемся с вами очень скоро.</p>
 
-                            <div class="popup__error disactive">
-                                <p id="popup-error">Текст ошибки</p>
-                            </div>
+                <p>А пока подписывайтесь на <a href="https://vk.com/hofu_business">нашу страницу ВКонтакте</a>
+                    — и мы будем держать вас в курсе новостей
+                    из Китая и экспорта.</p>
 
-                            <button id="formSubmit" type="button">Отправить</button>
+                <a href="https://vk.com/hofu_business"><button type="button">ВКОНТАКТЕ</button></a>
+              </div>
 
-                            <div class="popup__checkbox">
-                                <input required type="checkbox" id="checkbox-id-p">
-                                <label for="checkbox-id-p">Я согласен на обработку персональных данных</label>
-                            </div>
+	      <div class="popup__text-error">
+                <h2>При отправке почты произошла ошибка</h2>
+                <p id="smtp-error">Текст ошибки</p>
+              </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
+    
 
-                        </form>
+    <div class="body__wrapper">
 
-                    </div>
+        <div class="fixed" id="fixed">
+            <div class="fixed__inner">
+                <a href="./"><img src="assets/img/logo3.svg"></a>
+                <div class="fixed__logo-text">
+                    <h3>Группа компаний «ХОФУ»</h3>
+                    <p>Делаем эффективный и надежный бизнес с Китаем с 2008 года.</p>
+                </div>
 
-                    <div class="popup__text-submit">
-                        <h2>Форма успешно <br>
-                            обработана</h2>
-                        <p>Это означает, что мы свяжемся с вами очень скоро.</p>
+                <p class="fixed__inner-email">info@hofu.ru</p>
 
-                        <p>А пока подписывайтесь на <a href="https://vk.com/hofu_business">нашу страницу ВКонтакте</a>
-                            — и мы будем держать вас в курсе новостей
-                            из Китая и экспорта.</p>
+                <button id="modal__preview-1">Получить консультацию</button>
 
-                        <a href="https://vk.com/hofu_business"><button type="button">ВКОНТАКТЕ</button></a>
-                    </div>
+                <div class="fixed__contact">
+                    <ul>
+                        <li>Звоните, мы сейчас работаем</li>
+                    </ul>
 
-                    <div class="popup__text-error">
-                        <h2>При отправке почты произошла ошибка</h2>
-                        <p id="smtp-error">Текст ошибки</p>
-                    </div>
+                    <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
 
                 </div>
             </div>
+
         </div>
-    </div>
 
-
-    <div class="body__wrapper container demo">
-        <div class="content">
-            <div id="large-header" class="large-header">
-                <canvas id="demo-canvas"></canvas>
-                <div class="fixed" id="fixed">
-                    <div class="fixed__inner">
-                        <a href="./"><img src="assets/img/logo3.svg"></a>
-                        <div class="fixed__logo-text">
-                            <h3>Группа компаний «ХОФУ»</h3>
-                            <p>Делаем эффективный и надежный бизнес с Китаем с 2008 года.</p>
-                        </div>
-
-                        <p class="fixed__inner-email">info@hofu.ru</p>
-
-                        <button id="modal__preview-1">Получить консультацию</button>
-
-                        <div class="fixed__contact">
-                            <ul>
-                                <li>Звоните, мы сейчас работаем</li>
-                            </ul>
-
-                            <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
-                            <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
-
-                        </div>
+        <nav class="nav">
+            <div class="nav__wrapper">
+                <div class="nav__logo">
+                    <a href="./"><img src="assets/img/logo3.svg"></a>
+                    <div class="nav__logo-text">
+                        <h3>Группа компаний «ХОФУ»</h3>
+                        <p>Делаем эффективный и надежный бизнес с Китаем с 2008 года.</p>
                     </div>
-
                 </div>
-                <nav class="nav">
-                    <div class="nav__wrapper">
-                        <div class="nav__logo">
-                            <a href="./"><img src="assets/img/logo3.svg"></a>
-                            <div class="nav__logo-text">
-                                <h3>Группа компаний «ХОФУ»</h3>
-                                <p>Делаем эффективный и надежный бизнес с Китаем с 2008 года.</p>
-                            </div>
-                        </div>
 
-                        <div class="nav__list">
-                            <p><a href="#partnersLink">Услуги</a></p>
-                            <p><a href="#aboutLink">О компании</a></p>
-                            <p><a href="#partnersLink">Клиенты</a></p>
-                            <p><a href="#howLink">Контакты</a></p>
-                        </div>
+                <div class="nav__list">
+                    <p><a href="#partnersLink">Услуги</a></p>
+                    <p><a href="#aboutLink">О компании</a></p>
+                    <p><a href="#partnersLink">Клиенты</a></p>
+                    <p><a href="#howLink">Контакты</a></p>
+                </div>
 
-                        <div class="nav__contact">
-                            <ul>
-                                <li>Звоните, мы сейчас работаем</li>
-                            </ul>
+                <div class="nav__contact">
+                    <ul>
+                        <li>Звоните, мы сейчас работаем</li>
+                    </ul>
 
-                            <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
-                            <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
-                            <h2>info@hofu.ru</h2>
-                        </div>
-                    </div>
-                </nav>
-
-                <header class="header">
-                    <div class="header__wrapper">
-                        <div class="header__inner">
-                            <div class="header__inner-item">
-                                <h2>Выводим бренды и товары из СНГ на китайский рынок сбыта</h2>
-                                <button id="modal__preview-2">Узнать как начать продажи в Китае</button>
-                            </div>
-
-                            <div class="header__inner-item">
-                                <h2>Поиск, покупка, контроль и экспорт
-                                    любых товаров и оборудования из Китая</h2>
-                                <button id="modal__preview-3">Рассчитать ваш проект</button>
-                            </div>
-                        </div>
-
-                        <div class="header__text">
-                            <h1>Крупнейшая консалтинговая компания по работе <br>
-                                с Китаем САМОГО полного цикла</h1>
-
-                            <p>В нашем активе собственные помещения 9000<sup>м2</sup>, отдел опытных закупщиков и
-                                инспекторов качества, проворные кладовщики и отлаженный отдел продаж и
-                                маркетинга брендов на территории Китая.</p>
-                        </div>
-                    </div>
-                </header>
+                    <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
+                    <h2>info@hofu.ru</h2>
+                </div>
             </div>
-        </div>
+        </nav>
+
+        <header class="header">
+            <div class="header__wrapper">
+                <div class="header__inner">
+                    <div class="header__inner-item">
+                        <h2>Выводим бренды и товары из СНГ на китайский рынок сбыта</h2>
+                        <button id="modal__preview-2">Узнать как начать продажи в Китае</button>
+                    </div>
+
+                    <div class="header__inner-item">
+                        <h2>Поиск, покупка, контроль и экспорт
+                            любых товаров и оборудования из Китая</h2>
+                        <button id="modal__preview-3">Рассчитать ваш проект</button>
+                    </div>
+                </div>
+
+                <div class="header__text">
+                    <h1>Крупнейшая консалтинговая компания по работе <br>
+                        с Китаем САМОГО полного цикла</h1>
+
+                    <p>В нашем активе собственные помещения 9000<sup>м2</sup>, отдел опытных закупщиков и
+                        инспекторов качества, проворные кладовщики и отлаженный отдел продаж и
+                        маркетинга брендов на территории Китая.</p>
+                </div>
+            </div>
+        </header>
     </div>
 
     <main class="main">
@@ -475,9 +492,6 @@
     </footer>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
 </body>
 
 </html>
