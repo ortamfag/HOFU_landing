@@ -37,7 +37,7 @@ function log_write($msg){
     $mail->Host = 'ssl://smtp.yandex.ru';
     $mail->Port = 465;
     $mail->Username = 'send@hofu.ru';
-    $mail->Password = 'kxgreruaacorhfll';
+    $mail->Password = 'oclnwntshlzhholp';
     
     $mail->setFrom('send@hofu.ru', 'hofu.ru');		
     

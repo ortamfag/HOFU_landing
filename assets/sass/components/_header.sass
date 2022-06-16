@@ -26,7 +26,7 @@
                 min-height: 10vh
                 line-height: 1.417
                 margin: 0 auto
-                width: 92%
+                width: 100%
 
             & button
                 text-transform: uppercase
@@ -89,17 +89,18 @@
 
         &-wrapper
             display: grid
-            grid-template-columns: 50% 50%
+            grid-template-columns: 50% 45%
             grid-row-gap: 30px
             padding: 50px 0px 0px 0px
+            justify-content: center
 
         &-item
             display: flex
             align-items: center
-            justify-content: flex-start
+            justify-content: flex-end
             
             &:nth-child(2n + 2)
-                justify-content: flex-end
+                justify-content: center
 
 
             & img
@@ -119,17 +120,18 @@
 @media (max-width: 1655px)
 
     .header__text-item
-        justify-content: center !important
-
-    .header__text-wrapper
-        grid-template-columns: 40% 40%
-        justify-content: center
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        
+        &:nth-child(2n + 2)
+            justify-content: center
 
 @media (max-width: 1530px)
 
     .header__inner-item h2
         font-size: 44px
-        width: 70%
+        width: 100%
 
     .header__wrapper
         padding: 0 50px
@@ -148,7 +150,9 @@
     .header__wrapper
         padding: 0px
 
-@media (max-width: 1125px)
+@media (max-width: 1130px)
+    .header__inner-item button
+        width: 60%
     .header__inner
         flex-direction: column
 
@@ -176,6 +180,9 @@
     .header__inner-item button
         width: 70%
 
+@media (max-width: 760px)
+    .header__inner-item h2
+        font-size: 26px
 
 @media (max-width: 630px)
     .header__inner-item h2

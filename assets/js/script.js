@@ -39,6 +39,13 @@ btnEl2.addEventListener('click', () => {
 
 })
 
+btnEl3.addEventListener('click', () => {
+  
+  modalEl.classList.add('open');
+  body.classList.add('noscroll')
+
+})
+
 btnEl4.addEventListener('click', () => {
   
   modalEl.classList.add('open');
