@@ -39,13 +39,6 @@ btnEl2.addEventListener('click', () => {
 
 })
 
-btnEl3.addEventListener('click', () => {
-  
-  modalEl.classList.add('open');
-  body.classList.add('noscroll')
-
-})
-
 btnEl4.addEventListener('click', () => {
   
   modalEl.classList.add('open');
@@ -70,11 +63,81 @@ const formSubmit = document.querySelector('#formSubmit')
 const popupSubmit = document.querySelector('.popup__text-submit')
 const popupNormal = document.querySelector('.popup__text')
 
-formSubmit.addEventListener('click', () => popupSubmit.classList.add('active'))
-formSubmit.addEventListener('click', () => popupNormal.classList.add('disactive'))
+function validateForm() {
+  let error_text = "";
 
+  name_input = document.getElementById("form_name");
+  email_input = document.getElementById("form_email");
+  phcode_input = document.getElementById("form_phcode");
+  phone_input = document.getElementById("form_phone");
+  agr_checkbox = document.getElementById("checkbox-id-p");
+  
+  if (!name_input.value.length) {
+    error_text += "Не заполнено поле \"Имя\".<br>";
+  }
 
-//
+  if (
+    !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      email_input.value
+    )
+  ) {
+    error_text += "Не заполнено поле \"E-mail\".<br>";
+  }
+
+  if ( !/^\d{1,4}$/.test(phcode_input.value) ) {
+    error_text += "Некорректное значение в поле \"Код страны\".<br>";
+  }
+
+  if (!phone_input.value.length) {
+    error_text += "Не заполнено поле \"Телефон\".<br>";
+  }
+
+  if (!agr_checkbox.checked) {
+    error_text += "Для отправки формы Вам нужно подтвердить<br> согласие на обработку персональных данных.<br>";
+  }
+
+  return error_text;
+}
+
+function submitForm() {
+  ErrText = validateForm();
+
+  if (ErrText.length){
+	$('#popup-error').html(ErrText);
+	$('.popup__error').removeClass('disactive');
+	$('.popup__error').addClass('active');
+  }
+  else{
+	ym(89146903,'reachGoal','lid');
+
+	$('.popup__error').removeClass('active');
+        $('.popup__error').addClass('disactive');
+
+	$.post(
+		'php/mail2.php', 
+		$('#mail-form').serialize(),
+		function(data) {  
+			if (data.status == 'OK'){
+				$('.popup__text').addClass('disactive');
+				$('.popup__text-submit').addClass('active');
+			}
+			else{
+				if (data.status == 'ERROR'){
+					$('#popup-error').html('Ошибка отправки :<br>'+data.error);
+				}	
+				else{
+					$('#popup-error').html('Неизвестный ответ сервера');
+				}
+				
+				$('.popup__error').removeClass('disactive');
+				$('.popup__error').addClass('active');
+			}
+		},
+		'json'
+	);
+  }
+}
+
+$('#formSubmit').click(submitForm);
 
 const body = document.querySelector('.body')
-
