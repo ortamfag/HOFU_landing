@@ -27,6 +27,20 @@
 <!-- /Yandex.Metrika counter -->
 </head>
 
+<?php
+	$gbid=isset($_GET['gbid']) ? trim(htmlspecialchars($_GET['gbid'])) : '0';
+
+	$title_str ="Масштабируйте ваш бизнес<br> на Китай уже сегодня!";
+
+	if (($F = fopen("php/titles.csv", "r")) !== FALSE) {
+    		while (($data = fgetcsv($F, 1000, ";")) !== FALSE) {
+			if (trim($data[0]) == $gbid){
+				$title_str = $data[1];
+			}
+		}
+	}
+?>
+
 <body class="body">
 
 <!-- Rating Mail.ru counter -->
@@ -82,6 +96,9 @@ _tmr.push({
                   </div>
                   <p>Ваш проект:</p>
                   <textarea id="placeholder" name="message" placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email"></textarea>
+		  <input id="form_datetime" name="datetime" type="hidden">
+		  <input id="form_utm_campaign" name="utm_campaign" type="hidden" value="<?php echo $_GET['utm_campaign']; ?>">
+		  <input id="form_gbid" name="gbid" type="hidden" value="<?php echo $_GET['gbid']; ?>">
 
 		  <div class="popup__error disactive">
 			<p id="popup-error">Текст ошибки</p>
@@ -142,7 +159,7 @@ _tmr.push({
                     </ul>
 
                     <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
-                    <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+74951095465">+7 495 109 54 65</a></h2>
 
                 </div>
             </div>
@@ -172,7 +189,7 @@ _tmr.push({
                     </ul>
 
                     <h2><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></h2>
-                    <h2><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></h2>
+                    <h2><a style="color: #FFFFFF" href="tel:+74951095465">+7 495 109 54 65</a></h2>
                     <h2>info@hofu.ru</h2>
                 </div>
             </div>
@@ -182,7 +199,7 @@ _tmr.push({
             <div class="header__wrapper">
                 <div class="header__inner">
                     <div class="header__inner-item">
-                        <h2>Масштабируйте ваш бизнес на Китай уже сегодня!</h2>
+                        <h2><?php echo $title_str; ?></h2>
                         <button id="modal__preview-2">Отправить ваш запрос</button>
                     </div>
                 </div>
@@ -254,50 +271,6 @@ _tmr.push({
             </div>
         </section>
 
-        <section id="num">
-            <div class="num">
-                <div class="num__wrapper">
-                    <div class="num__wrapper-item">
-                        <p>01</p>
-                        <p>Более 15 лет на экспортном рынке Китая</p>
-                    </div>
-
-                    <div class="num__wrapper-item">
-                        <p>02</p>
-                        <p>Налаженная логистика во все
-                            крупные города России</p>
-                    </div>
-
-                    <div class="num__wrapper-item">
-                        <p>03</p>
-                        <p>Собственный склад
-                            4500<sup>м2</sup> в Китае</p>
-                    </div>
-
-                    <div class="num__wrapper-item">
-                        <p>04</p>
-                        <p>Импортируем товары в Китай,
-                            охватываем все маркетплейсы
-                            в Китае</p>
-                    </div>
-
-                    <div class="num__wrapper-item">
-                        <p>05</p>
-                        <p>Свое производство в
-                            г. Лишуй, Китай</p>
-                    </div>
-
-                    <div class="num__wrapper-item">
-                        <p>06</p>
-                        <p>Свой штат русскоговорящих
-                            сотрудников непосредственно
-                            в Китае
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="partners">
             <div class="partners">
                 <div id="partnersLink"></div>
@@ -336,7 +309,7 @@ _tmr.push({
 
                         <div class="partners__list-item">
                             <div class="partners__list-item-text">
-                                <h2>Выведем вашу продукцию на Китайский рынок</h2>
+                                <h2>Запустим продажи вашего продукта на Китайском рынке</h2>
                                 <p>У нас богатый опыт в выводе на рынок новых продуктов
                                     — мы создаем бренды с нуля, начиная с позиционирования
                                     и визуализации, заканчивая генерацией живого коммерческого трафика
@@ -414,55 +387,56 @@ _tmr.push({
         <section id="services">
             <div class="services">
                 <div class="services__wrapper">
-                    <div class="services__inner">
-                        <div class="services__item">
-                            <h2>Бизнес консультации</h2>
-
-                            <ul>
-                                <li>Консультации по вопросам организации бизнеса в Китае</li>
-                                <li>Оптимизация схем работы с Китаем</li>
-                                <li>Помощь в разрешения споров и конфликтных ситуаций</li>
-                                <li>Консультации по инвестиционным возможностям</li>
-                                <li>Оценка благонадежности китайского партнера</li>
-                                <li>Проверка финансового состояния китайских компаний</li>
-                                <li>Услуги переводчиков с китайского</li>
-                                <li>Прочие консультации</li>
-                            </ul>
-                        </div>
-
-                        <div class="services__item">
-                            <h2>Консалтинговые услуги</h2>
-
-                            <ul>
-                                <li>Поиск производителей, товаров и услуг в Китае</li>
-                                <li>Изучение определенных сегментов рынка Китая (отраслевые исследования)</li>
-                                <li>Проработка транспортных схем поставок товаров в Китай / из Китая и других стран ЮВА
-                                </li>
-                                <li>Работа на выставках</li>
-                                <li>Сертификация товара и лицензирование ПО.</li>
-                                <li>Прочие консалтинговые услуги</li>
-                            </ul>
-                        </div>
-
-                        <div class="services__item">
-                            <h2>Складские услуги</h2>
-
-                            <ul>
-                                <li>Хранение и консолидация грузов. Данный тип услуг призван сократить Ваши издержки на
-                                    хранение грузов в процессе перевозки и аренду собственного складского помещения.
-                                    Также на промежуточные консолидационные склады помещаются грузы, требующие
-                                    произведения определенных действий</li>
-                                <li>Фотографирование и видеофиксация грузов</li>
-                                <li>Взвешивание грузов</li>
-                                <li>Пересчет грузовых мест</li>
-                                <li>Упаковка, паллетирование, маркировка</li>
-                                <li>Прочие складские услуги</li>
-                            </ul>
-                        </div>
-                    </div>
-
                     <h2 class="services__wrapper-bottom">Не нашли нужную услугу?</h2>
                     <button id="modal__preview-4">Оставьте заявку, чтобы обсудить ваш проект</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="no">
+            <div class="no">
+                <div class="no__wrapper">
+                    <div class="no__inner">
+                        <h2 class="no__title">Это точно <span>не про нас</span></h2>
+                        <div class="no__item-wrapper">
+                            
+                            <div class="no__item">
+                            
+                                <img src="assets/img/ne.png">
+
+                                <h2>бизнес-консультанты</h2>
+
+                                <p>которые работают чисто в теоретической <br>
+                                    плоскости и не отвечают <br>
+                                    за эффективность своих советов</p>
+                            
+                            </div>
+
+                            <div class="no__item">
+                            
+                                <img src="assets/img/ne.png">
+
+                                <h2>маркетинговое агентство</h2>
+
+                                <p>которые кроме продажи собственных услуг <br>
+                                    и курсов не имеют реальных навыков<br>
+                                    и другого подтвержденного успеха</p>
+                            
+                            </div>
+
+                            <div class="no__item">
+                            
+                                <img src="assets/img/ne.png">
+
+                                <h2>представители-одиночки</h2>
+
+                                <p>работающие через левые компании
+                                    с <br> лишними звеньями, в виде <br>
+                                    фрилансеров и посредников</p>
+                            
+                            </div>          
+                        </div>   
+                    </div>
                 </div>
             </div>
         </section>
@@ -494,7 +468,7 @@ _tmr.push({
                                 <p><span class="official">Официальные контакты для связи с ХОФУ:</span></p>
                                 <p>info@hofu.ru</p>
                                 <p><a style="color: #FFFFFF" href="tel:+8613235799307">+86 132 3579 9307</a></p>
-                                <p><a style="color: #FFFFFF" href="tel:+79025102496">+7 902 510 24 96</a></p>
+                                <p><a style="color: #FFFFFF" href="tel:+74951095465">+7 495 109 54 65</a></p>
                             </div>
                         </div>
 

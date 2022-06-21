@@ -37,7 +37,7 @@ function log_write($msg){
     $mail->Host = 'ssl://smtp.yandex.ru';
     $mail->Port = 465;
     $mail->Username = 'send@hofu.ru';
-    $mail->Password = 'oclnwntshlzhholp';
+    $mail->Password = 'ylpryqdcuekufrks';
     
     $mail->setFrom('send@hofu.ru', 'hofu.ru');		
     
@@ -49,6 +49,9 @@ function log_write($msg){
     $body .= "E-mail: ".$_POST['email']."<br>";
     $body .= "Phone: ".$_POST['phcode'].$_POST['phone']."<br>";
     $body .= "Message: ".$_POST['message']."<br>";
+    $body .= "Message time: ".$_POST['datetime']."<br><br><br>";
+    $body .= "utm_campaign: ".$_POST['utm_campaign']."<br>";
+    $body .= "gbid: ".$_POST['gbid']."<br>";
     $mail->msgHTML($body);
         
     $mail->SMTPOptions = array(

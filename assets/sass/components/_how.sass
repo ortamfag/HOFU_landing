@@ -1,5 +1,5 @@
 .how
-    padding: 0 100px 100px 100px
+    padding: 0px 100px 100px 100px
     background-color: #1a1a1a
     position: relative
 
@@ -14,8 +14,9 @@
             & h2
                 color: #fad63a
                 @include bold
-                font-size: 24px
+                font-size: 34px
                 margin-bottom: 30px
+                padding-top: 60px
 
             & p
                 @include medium
@@ -64,3 +65,7 @@
 
         &__inner img
             width: 100%
+
+@media (max-width: 530px)
+    .how__inner-text h2
+        font-size: 24px
