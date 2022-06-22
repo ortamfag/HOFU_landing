@@ -15,6 +15,38 @@ function opacity() {
 window.onscroll=opacity
 opacity()
 
+//slider
+let sliderItem = document.querySelectorAll('.problem__item')
+let sliderText = document.querySelectorAll(`.slider-text`)
+
+sliderItem.forEach(function(el) {
+
+  function active() {
+    for (let i = 0; i < sliderItem.length; i++) {
+      sliderItem[i].classList.remove('slider-active')
+    }
+
+    for (let i = 0; i < sliderText.length; i++) {
+      sliderText[i].classList.remove('slider-text-active')
+    }
+    let sliderActive = el
+
+    sliderActive.classList.add('slider-active')
+
+    for (let i = 0; i < sliderItem.length; i++) {
+      if (sliderItem[i].classList.contains('slider-active')){
+        let textActive = document.querySelector('.slider-text[data-name="'+i+'"]')
+        textActive.classList.add('slider-text-active')
+        
+      }
+    }
+
+  }
+
+  el.addEventListener('click', active)
+})
+   
+
 //modal
 const modalEl = document.querySelector('#modalPopup'),
       btnEl1 = document.querySelector('#modal__preview-1'),
