@@ -1,9 +1,10 @@
-<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.46 40.42">
-  <title>NO</title>
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 77.47 39.71">
+  <title>Безымянный-1</title>
   <g>
-    <path d="M39.7,1.66V42.08H30.35V25.51H12V42.08H2.63V1.66H12V17.6H30.35V1.66Z" transform="translate(-2.63 -1.66)" fill="#fff"/>
-    <path d="M81.1,34.57v7.51H49.8V1.66H80.35V9.17H59.1v8.77H77.87v7.28H59.1v9.35Z" transform="translate(-2.63 -1.66)" fill="#fff"/>
+    <path d="M38.8,2.21V41.92H29.61V25.64h-18V41.92H2.39V2.21h9.19V17.87h18V2.21Z" transform="translate(-2 -2.21)" fill="#fff"/>
+    <path d="M79.47,34.54v7.38H48.73V2.21h30V9.58H57.86v8.63H76.3v7.14H57.86v9.19Z" transform="translate(-2 -2.21)" fill="#fff"/>
   </g>
-  <rect x="0.37" y="16.34" width="37" height="7" fill="#ff9200"/>
-  <rect x="47.37" y="16.34" width="28" height="7" fill="#ff9200"/>
+  <polygon points="18.5 19.79 18.5 19.79 18.5 19.79 18.5 19.79 18.5 19.79"/>
+  <image width="37" height="9" transform="translate(0 14.79)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAJCAYAAAC18OVOAAAACXBIWXMAAAsSAAALEgHS3X78AAAAJUlEQVQ4T2P8P4nhP8MgA0yEFAwEGHUUsWDUUcSCUUcRCwalowCbVgKiOy129QAAAABJRU5ErkJggg=="/>
+  <image width="29" height="8" transform="translate(46 15.79)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAICAYAAAAFiPQnAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHklEQVQoU2P8P4nhPwOdARMhBbQAo5bSFIxaSlMAAHnQAqD5CFtRAAAAAElFTkSuQmCC"/>
 </svg>
