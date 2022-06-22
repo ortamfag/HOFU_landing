@@ -36,37 +36,12 @@
     &__item
 
         position: relative
-        min-height: 130px
-        width: 25%
+        width: 24%
+        border: 5px solid #242424
+        padding: 25px
+        background-color: #242424 
+        border-radius: 10px
         cursor: pointer
-
-        &::before
-            content: ""
-            position: absolute
-            top: 0px
-            left: 0px
-            bottom: 0px
-            right: 0px
-            margin: auto
-            border-radius: 100em
-            width: 125px
-            height: 125px
-            z-index: 1
-            background: #2d2d2d
-        
-        &::after
-            content: ""
-            position: absolute
-            top: 0px
-            left: 0px
-            bottom: 0px
-            right: 0px
-            margin: auto
-            border-radius: 100em
-            width: 65px
-            height: 65px
-            z-index: 1
-            background: #1a1a1a
 
         & p
             @include bold
@@ -74,9 +49,6 @@
             color: $white
             font-size: 20px
             z-index: 2
-            position: relative
-            width: 100%
-            height: 100%
             display: flex
             justify-content: center
             align-items: center
@@ -111,11 +83,8 @@
 .slider
 
     &-active
-
-        &::before
-            content: ""
-            background: #f7921d
-            transition: 0.2s ease-in-out
+        border: 5px solid #ff9200
+        transition: 0.3s
 
     &-text
         position: absolute
@@ -151,6 +120,47 @@
     .no__wrapper
         padding: 0 5% !important
 
+@media (max-width: 1060px)
+    .problem__item-wrapper
+        display: grid
+        grid-template-columns: 45% 45%
+        grid-gap: 20px
+
+    .problem__item
+        width: 100%
+
 @media (max-width: 530px)
     .no__title
         font-size: 24px
+
+    .problem__title
+        font-size: 24px
+
+    .problem__item-wrapper
+        grid-template-columns: 100%
+        grid-gap: 15px
+        margin-bottom: 20px
+
+    .problem__item
+        padding: 7px
+        
+        & p
+            font-size: 14px
+            & br
+                display: none
+
+    .problem__item-inner h2
+        font-size: 21px
+        margin-bottom: 20px
+
+    .problem__item-inner p
+        width: 100%
+
+    .problem__item-inner
+        min-height: 300px
+
+    .problem__wrapper
+        padding: 0 3% !important
+
+    .problem__title
+        margin-bottom: 30px

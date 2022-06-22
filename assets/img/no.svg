@@ -1,10 +1,6 @@
-<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 77.47 39.71">
-  <title>Безымянный-1</title>
-  <g>
-    <path d="M38.8,2.21V41.92H29.61V25.64h-18V41.92H2.39V2.21h9.19V17.87h18V2.21Z" transform="translate(-2 -2.21)" fill="#fff"/>
-    <path d="M79.47,34.54v7.38H48.73V2.21h30V9.58H57.86v8.63H76.3v7.14H57.86v9.19Z" transform="translate(-2 -2.21)" fill="#fff"/>
-  </g>
-  <polygon points="18.5 19.79 18.5 19.79 18.5 19.79 18.5 19.79 18.5 19.79"/>
-  <image width="37" height="9" transform="translate(0 14.79)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAJCAYAAAC18OVOAAAACXBIWXMAAAsSAAALEgHS3X78AAAAJUlEQVQ4T2P8P4nhP8MgA0yEFAwEGHUUsWDUUcSCUUcRCwalowCbVgKiOy129QAAAABJRU5ErkJggg=="/>
-  <image width="29" height="8" transform="translate(46 15.79)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAICAYAAAAFiPQnAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHklEQVQoU2P8P4nhPwOdARMhBbQAo5bSFIxaSlMAAHnQAqD5CFtRAAAAAElFTkSuQmCC"/>
+<svg width="153" height="86" viewBox="0 0 153 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M54 6H70V42V79H54V6ZM20.0416 79H4V6H20.0416V79ZM54 49.07H18.7792V35H36.5H54V49.07Z" fill="white"/>
+<path d="M104.658 37H122H140V49H104.658V37ZM105.921 66.4429H146V80H88.9844V7H144.632V20.5571H105.921V66.4429Z" fill="white"/>
+<rect x="4" y="35" width="66" height="14" fill="#FF9200"/>
+<rect x="89" y="35" width="51" height="14" fill="#FF9200"/>
 </svg>
