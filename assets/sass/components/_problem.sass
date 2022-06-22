@@ -11,8 +11,7 @@
 
     &__button
         text-transform: uppercase
-        max-width: 100%
-        min-width: 25%
+        width: 25%
         color: $white
         background: rgb(255,146,0)
         background: linear-gradient(0deg, rgba(255,146,0,1) 0%, rgba(255,190,0,1) 90%)
@@ -120,6 +119,14 @@
     .no__wrapper
         padding: 0 5% !important
 
+@media (max-width: 1220px)
+    .problem__item-inner
+        min-height: 220px
+
+@media (max-width: 990px)
+    .slider-text-active
+        position: static
+
 @media (max-width: 1060px)
     .problem__item-wrapper
         display: grid
@@ -128,6 +135,10 @@
 
     .problem__item
         width: 100%
+
+@media (max-width: 620px)
+    .problem__button
+        width: 45%
 
 @media (max-width: 530px)
     .no__title

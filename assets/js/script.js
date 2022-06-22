@@ -67,7 +67,6 @@ sliderItem.forEach(function(el) {
 const modalEl = document.querySelector('#modalPopup'),
       btnEl1 = document.querySelector('#modal__preview-1'),
       btnEl2 = document.querySelector('#modal__preview-2'),
-      btnEl3 = document.querySelector('#modal__preview-3'),
       closeEl = document.querySelector('#modalCross'),
       closeBody = document.querySelector('.popup'),
       bg = document.querySelector('#modalBg')
@@ -80,13 +79,6 @@ btnEl1.addEventListener('click', () => {
 })
 
 btnEl2.addEventListener('click', () => {
-  
-  modalEl.classList.add('open');
-  body.classList.add('noscroll')
-
-})
-
-btnEl3.addEventListener('click', () => {
   
   modalEl.classList.add('open');
   body.classList.add('noscroll')
