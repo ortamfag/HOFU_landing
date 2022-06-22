@@ -124,8 +124,15 @@
         min-height: 220px
 
 @media (max-width: 990px)
-    .slider-text-active
+    .slider-text
+        display: none
         position: static
+
+    .problem__item-inner
+        min-height: 0px
+
+    .slider-text-active
+        display: block
 
 @media (max-width: 1060px)
     .problem__item-wrapper
@@ -179,7 +186,6 @@
     .problem__button
         width: 50%
         font-size: 14px
-        margin-top: -20px
 
     .slider-text-active
         position: static
