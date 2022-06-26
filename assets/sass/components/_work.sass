@@ -1,0 +1,200 @@
+.work
+    background-color: #1a1a1a
+    padding-bottom: 50px 
+
+    &__wrapper
+
+        &-text
+            @include bold
+            font-size: 34px
+            color: #fad63a
+            text-align: center
+            margin-bottom: 60px
+            padding-top: 40px
+
+    &__inner
+        display: grid
+        grid-template-columns: 15% 15% 15% 15% 15% 15%
+        grid-gap: 40px
+        justify-content: center
+        grid-template-areas: "i1 i1 i2 i2 i3 i3" ". i4 i4 i5 i5 ."
+
+        &-item
+            display: flex
+            flex-direction: column
+
+            & h2
+                @include bold
+                font-size: 34px
+                color: #fad63a
+                text-align: center
+                margin-bottom: 10px
+                position: relative
+
+                &::before
+                    content: ''
+                    position: absolute
+                    background-color: $white
+                    border-radius: 300em
+                    width: 24px
+                    height: 24px
+                    left: 90px
+                    top: 35px
+
+            & span
+                font-size: 75px
+
+            &-subtitle
+
+                & h3
+                    @include bold
+                    font-size: 16px
+                    color: #fad63a
+                    text-align: center
+                    margin-bottom: 10px
+
+                & p
+                    @include medium
+                    font-size: 16px
+                    color: $white
+                    text-align: center
+
+        &-item:nth-child(1)
+            grid-area: i1
+
+            & h2::after
+                content: ''
+                width: 217px
+                height: 5px
+                background-image: url('../img/horizontal_connect.png')
+                position: absolute
+                top: 45px
+                right: -120px
+
+        &-item:nth-child(2)
+            grid-area: i2
+
+            & h2::after
+                content: ''
+                width: 217px
+                height: 5px
+                background-image: url('../img/horizontal_connect.png')
+                position: absolute
+                top: 45px
+                right: -120px
+
+        &-item:nth-child(3)
+            grid-area: i3
+
+        &-item:nth-child(4)
+            grid-area: i4
+
+            & h2::after
+                content: ''
+                width: 217px
+                height: 5px
+                background-image: url('../img/horizontal_connect.png')
+                position: absolute
+                top: 45px
+                right: -120px
+
+        &-item:nth-child(5)
+            grid-area: i5
+
+
+@media (max-width: 1650px)
+    .work__wrapper
+        padding: 0 5% !important
+
+@media (max-width: 1260px)
+    .work__inner
+        grid-template-columns: 100%
+        grid-template-areas: none
+
+        &-item
+            grid-area: auto / auto / auto / auto !important
+
+            & h2
+                width: 150px
+                margin: 0 auto
+
+                &::before
+                    content: ''
+                    position: absolute
+                    background-color: $white
+                    border-radius: 300em
+                    width: 24px
+                    height: 24px
+                    left: -150px
+                    top: 35px
+
+                &::after
+                    content: ''
+                    width: 217px
+                    height: 5px
+                    background-image: url('../img/horizontal_connect.png')
+                    position: absolute
+                    top: 175px !important
+                    left: -246px !important
+                    right: 0px !important
+                    transform: rotate(90deg)
+
+            &:nth-child(5)
+
+                & h2
+                    &::after
+                        display: none
+
+    .work__inner-item-subtitle
+        & br
+            display: none
+
+        & p
+            width: 35%
+            margin: 0 auto
+
+
+@media (max-width: 1030px)
+
+    .work__inner-item-subtitle
+        & p
+            width: 80%
+            
+    .work__inner-item
+        grid-area: auto / auto / auto / auto !important
+
+        & h2
+
+            &::before
+                content: ''
+                width: 24px
+                height: 24px
+                left: -315px
+                top: 35px
+
+            &::after
+                content: ''
+                top: 175px !important
+                left: -410px !important
+                right: 0px !important
+
+        &:nth-child(2)
+            margin-bottom: 55px
+
+        &:nth-child(4)
+            margin-bottom: 25px
+
+
+@media (max-width: 530px)
+    .work__inner-item-subtitle
+        & p
+            width: 100%
+
+    .work__wrapper-text
+        font-size: 24px
+        
+    .work__inner-item
+        margin-bottom: 0px !important
+
+
+

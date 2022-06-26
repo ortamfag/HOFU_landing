@@ -1,0 +1,26 @@
+.cash
+    padding: 0px 0px 60px 0px
+    background-color: #242424
+
+    &__title 
+        @include bold
+        font-size: 34px
+        color: $white
+        text-align: center
+        margin-bottom: 40px
+        padding-top: 40px
+        & span
+            color: #fad63a
+
+    &__subtitle
+        @include medium
+        color: $white
+        text-align: center
+        font-size: 16px
+
+        & span
+            @include bold
+
+@media (max-width: 530px)
+    .cash__title
+        font-size: 24px
