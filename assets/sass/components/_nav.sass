@@ -38,7 +38,6 @@
         display: flex
         align-items: center
         justify-content: space-between
-        margin-right: 40px
 
         & p
             @include medium
@@ -51,6 +50,58 @@
 
             & a
                 color: $white
+
+    &__link
+        margin-right: 40px
+
+    &__social
+        display: flex
+        justify-content: center
+        align-items: center
+
+        & a
+            display: block
+            text-transform: uppercase
+            width: 210px
+            color: $white
+            border-radius: 10px
+            border: 0
+            outline: 0
+            padding: 5px 15px
+            display: flex
+            justify-content: space-around
+            align-items: center
+            @include bold
+            font-size: 10px
+            cursor: pointer
+            margin-top: 20px
+
+            &:nth-child(1)
+                background: #00a8fc
+                background: linear-gradient(0deg, #00a8fc 0%, #008bd0 90%)
+                box-shadow: 0px 15px 30px -10px #008bd0
+                margin-right: 20px
+
+                &:hover
+                    transition: 0.4s
+                    box-shadow: 0px 10px 20px -10px #008bd0
+
+                & img 
+                    width: 21px
+                    height: 21px
+
+            &:nth-child(2)
+                background: #5bf175
+                background: linear-gradient(0deg, #33b831 0%, #5bf175 90%)
+                box-shadow: 0px 15px 30px -10px #33b831
+
+                &:hover
+                    transition: 0.4s
+                    box-shadow: 0px 10px 20px -10px #33b831
+
+                & img 
+                    width: 21px
+                    height: 21px
 
 
     &__contact
@@ -117,6 +168,12 @@
             & img
                 margin-right: 0px
 
+        &__social
+            flex-direction: column
+
+            & a:nth-child(1) 
+                margin-right: 0px
+
 @media (max-width: 1335px)
     .nav
         padding-top: 20px !important
@@ -135,16 +192,73 @@
 
     .nav__contact
         align-self: flex-end
+
+@media (max-width: 960px)
+    .nav__social a
+        width: 100%
+
+        & img
+            margin-right: 10px
+
+        & p
+            font-size: 9px
+
+@media (max-width: 910px)
+    .nav__social
+        justify-content: center
+        & a 
+            width: 45px !important
+
+            & p
+                display: none
+
+            & img
+                margin-right: 0px
+                width: 30px !important
+                height: 30px !important
+
+            &:nth-child(2)
+                margin-right: 0px !important
+
+    .nav__link
+        margin-right: 34px !important
+                
                      
-@media (max-width: 670px)
+@media (max-width: 700px)
     .nav__list
         display: none
 
     .nav__logo
         max-width: 50%
 
+    .nav__logo-text p
+        font-size: 16px
+
     .nav__contact h2
         font-size: 18px
+
+    .nav__link
+        margin-right: 0px !important
+
+    .nav__wrapper
+        align-items: end
+
+@media (max-width: 630px)
+    .nav__wrapper
+        position: relative
+
+    .nav__link
+        position: absolute
+        right: 0
+        top: 35px
+
+    .nav__social
+        flex-direction: row
+        margin-bottom: 15px
+
+        & a
+            &:nth-child(1)
+                margin-right: 15px !important
 
 @media (max-width: 460px)
     .nav__wrapper
@@ -160,4 +274,13 @@
 
         & h2
             text-align: center
+
+    .nav__social
+        margin-bottom: 0px
+
+    .nav__link
+        right: 50%
+        left: 50%
+        top: auto
+        bottom: -50px
         

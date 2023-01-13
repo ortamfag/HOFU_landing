@@ -176,11 +176,27 @@ _tmr.push({
                     </div>
                 </div>
 
-                <div class="nav__list">
-                    <p><a href="#partnersLink">Услуги</a></p>
-                    <p><a href="#aboutLink">О компании</a></p>
-                    <p><a href="#partnersLink">Клиенты</a></p>
-                    <p><a href="#howLink">Контакты</a></p>
+                <div class="nav__link">
+
+                    <div class="nav__list">
+                        <p><a href="#partnersLink">Услуги</a></p>
+                        <p><a href="#aboutLink">О компании</a></p>
+                        <p><a href="#partnersLink">Клиенты</a></p>
+                        <p><a href="#howLink">Контакты</a></p>
+                    </div>
+
+                    <div class="nav__social">
+                        <a href="https://t.me/ortamfag" target="_blank">
+                            <img src="assets/img/telegram.svg">
+                            <p>Написать в телеграм</p>
+                        </button>
+
+                        <a href="https://api.whatsapp.com/send?phone=79250957575" target="_blank">
+                            <img src="assets/img/whatsapp.svg">
+                            <p>Написать в ватсап</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="nav__contact">
@@ -262,14 +278,14 @@ _tmr.push({
                         <div class="problem__item-wrapper element-animation">
                             
                             <div class="problem__item slider-active">
-                                <p>Запуск продаж <br>
-                                    внутри Китая</p>
-                            </div>
-                            
-                            <div class="problem__item">
                                 <p>Поиск и проверка <br>
                                     поставщиков</p>
                             </div> 
+                            
+                            <div class="problem__item">
+                                <p>Запуск продаж <br>
+                                    внутри Китая</p>
+                            </div>
 
                             <div class="problem__item">
                                 <p>Доставка и <br>
@@ -283,13 +299,13 @@ _tmr.push({
                         </div>   
 
                         <div class="problem__item-inner element-animation">
-                            <div data-name='0' class="slider-text slider-text-active">
+                            <div data-name='1' class="slider-text">
                                 <h2>Запуск продаж внутри Китая</h2>
                                 <p>У нас богатый опыт в выводе на рынок новых продуктов
                                     — мы создаем бренды с нуля, начиная с позиционирования и визуализации,
-                                    заканчивая генерацией живого коммерческого трафик</p>
+                                    заканчивая генерацией живого коммерческого трафика.</p>
                             </div>
-                            <div data-name='1' class="slider-text">
+                            <div data-name='0' class="slider-text slider-text-active">
                                 <h2>Поиск и проверка
                                     поставщиков</h2>
                                 <p>У нас собственный отдел опытных закупщиков и инспекторов качества. 
@@ -493,11 +509,12 @@ _tmr.push({
                             
                                 <img src="assets/img/no.svg">
 
-                                <h2>фрилансеры-китаеведы</h2>
+                                <h2>фрилансеры-ипешники</h2>
 
-                                <p>работающие через левые компании
-                                    с <br> лишними звеньями, в виде <br>
-                                    других фрилансеров и посредников</p>
+                                <p>русско-китайско говорящие студенты, <br>
+                                    которые вдруг открыли в себе <br>
+                                    экспертизу по бизнесу с Китаем
+                                </p>
                             
                             </div>          
                         </div>   
@@ -544,7 +561,7 @@ _tmr.push({
 
                             <div class="work__inner-item-subtitle">
                                 <h3>2-14 дней</h3>
-                                <p>Оплата первого этапа фактической работы. <br>
+                                <p>
                                     Разрабатываем стратегию сотрудничества <br>
                                     готовящейся проекта: что именно надо сделать, <br>
                                     какие шаги предпринять, в каком порядке, <br>
@@ -641,7 +658,18 @@ _tmr.push({
         </div>
     </footer>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.activity.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+	$('body').activity({
+		'achieveTime':60,
+		'testPeriod':10,
+		useMultiMode: 1,
+		callBack: function (e) {
+			ym(89146903,'reachGoal','60sec');
+		}
+	});
+    </script>
 </body>
 
 </html>
