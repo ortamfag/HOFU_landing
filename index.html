@@ -96,6 +96,16 @@ _tmr.push({
                   </div>
                   <p>Ваш проект:</p>
                   <textarea id="placeholder" name="message" placeholder="Опишите ваш проект или задачу в свободной форме, чтобы мы могли до начала консультации подготовиться и предоставить ряд решений." type="email"></textarea>
+                  <p>Ориентировочный бюджет:</p>
+                  <div class="select">
+                    <select id="standard-select">
+                      <option value="Option 1">100 000 - 500 000р</option>
+                      <option value="Option 2">500 000 - 1 000 000р</option>
+                      <option value="Option 3">свыше 1 000 000р</option>
+                      <option value="Option 4">Я не знаю</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
                 <input id="form_datetime" name="datetime" type="hidden">
                 <input id="form_utm_campaign" name="utm_campaign" type="hidden" value="<?php echo $_GET['utm_campaign']; ?>">
                 <input id="form_gbid" name="gbid" type="hidden" value="<?php echo $_GET['gbid']; ?>">
