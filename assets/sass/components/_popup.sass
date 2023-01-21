@@ -207,6 +207,7 @@ textarea
     width: 100%
     min-height: 130px
     max-width: 900px
+    margin-bottom: 20px
 
     &::placeholder
         line-height: 26px
@@ -280,55 +281,55 @@ input[type="tel"]
 
 select
     appearance: none
-    background-color: transparent
+    background-color: #2a2a2a
     border: none
     padding: 0 1em 0 0
     margin: 0
     width: 100%
     @include medium
-    font-size: inherit
-    cursor: inherit
+    font-size: 16px
+    cursor: pointer
     line-height: inherit
     z-index: 1
     &::-ms-expand
         display: none
     outline: none
+    color: #FFFFFF
 
 .select
     display: grid
     grid-template-areas: "select"
     align-items: center
     position: relative
+    border-radius: 10px
 
     select,
     &::after 
         grid-area: select
 
-    min-width: 15ch
-    max-width: 30ch
-
-    border: 1px solid #777777
     border-radius: 0.25em
-    padding: 0.35em 0.5em
+    padding: 20px
 
     font-size: 16px
     cursor: pointer
     line-height: 1.1
 
-    background-color: #fff
-    background-image: linear-gradient(to top, #f9f9f9, #fff 33%)
+    background-color: #2a2a2a
+    background-image: linear-gradient(to top, #2a2a2a, #2a2a2a 33%)
 
     &::after
         content: ""
         justify-self: end
         width: 0.8em
         height: 0.5em
-        background-color: #777777
+        background-color: #FFFFFF
         clip-path: polygon(100% 0%, 0 0%, 50% 100%)
+        z-index: 1
 
 option
     white-space: normal
-    outline-color: blue
+    outline-color: #FFFFFF
+    color: #FFFFFF
 
 select:focus + .focus
   position: absolute
@@ -336,9 +337,7 @@ select:focus + .focus
   left: -1px
   right: -1px
   bottom: -1px
-  border: 2px solid blue
   border-radius: inherit
-
 
   
 
